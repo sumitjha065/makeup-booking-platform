@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 23, 23, 23;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 250, 245, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: "Inter", sans-serif;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Custom gradients */
+.gradient-bg {
+  background: linear-gradient(135deg, #f9a8d4 0%, #c084fc 50%, #818cf8 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Custom components */
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-pink-400 text-pink-600 hover:bg-pink-50 font-semibold py-3 px-6 rounded-full transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply transform hover:scale-105 transition-all duration-300 hover:shadow-2xl;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4 font-serif;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-gray-600 text-center max-w-2xl mx-auto mb-12;
+  }
+}
+
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
+
+.font-sans {
+  font-family: "Inter", sans-serif;
+}
