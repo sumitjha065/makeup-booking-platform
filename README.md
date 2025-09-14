@@ -1,4 +1,4 @@
-# GlamBook - Makeup Artist Booking Platform
+# Makeup Artist Booking Platform
 
 ![GlamBook Preview](https://img.shields.io/badge/Status-Ready%20to%20Deploy-brightgreen)
 ![Next.js](https://img.shields.io/badge/Next.js-14.0-black)
@@ -45,7 +45,7 @@ A professional makeup artist booking platform built with Next.js, TypeScript, an
 1. Clone the repository:
 
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/sumitjha065/makeup-booking-platform.git
    cd makeup-booking-platform
    ```
 
